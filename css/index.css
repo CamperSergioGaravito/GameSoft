@@ -1,0 +1,63 @@
+/* paleta de colores: https://colorhunt.co/palette/35155d512b814477ce8cabff */
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Mooli&family=Phudu:wght@900&family=Roboto+Slab:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Bree+Serif&family=Mooli&family=Phudu:wght@900&family=Roboto+Slab:wght@100;400&family=Young+Serif&display=swap');
+
+:root {
+    --fondo: #35155D;
+    --font-family-Arima: 'Arima',serif;
+    --fondo-btnsMenu: #5d14b6;
+    --fondo-HoverBtnsMenu: #9056d7;
+}
+
+body {
+    width: 100%;
+    background-color: var(--fondo);
+    font-family: var(--font-family-Arima);
+}
+
+.header {
+    height: 10vh;
+}
+
+.header__img {
+    width: 100px;
+    height: 70px;
+}
+
+.nav {
+    height: 50vh;
+    top: calc(65% / 2);
+}
+
+.nav__btn {
+    width: 120px;
+    height: 120px;
+    background-color: var(--fondo-btnsMenu);
+    outline: none;
+    border: white 1px solid;
+    overflow: hidden;
+}
+
+.nav__btn:hover {
+    background-color: var(--fondo-HoverBtnsMenu);
+}
+
+.nav__spanBtn {
+    bottom: 5%;
+    background-color: rgba(214, 214, 213, 0.421);
+}
+
+.header__btnMenu {
+    width: 80px;
+    height: 80px;
+    border: 0;
+}
+
+.header__btnMenu:hover {
+    border: 1px white solid;
+}
+
+.board {
+    height: 78vh;
+}

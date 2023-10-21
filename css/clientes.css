@@ -1,0 +1,65 @@
+.contBtnsAcciones {
+    right: 2%;
+    bottom: 2%;
+    width: 280px;
+}
+
+.contBtnsAcciones > a {
+    width: 75px;
+    height: 75px;
+}
+
+.btnEliminarTodos {
+    background-color: rgba(255, 0, 0, 0.518);
+}
+
+.btnEliminarTodos:hover {
+    background-color: rgba(243, 63, 63, 0.851);
+}
+
+.bgAzulMod {
+    background-color: rgb(13,110,253);
+}
+
+input[type="checkbox"] {
+    transform: scale(2);
+    top: 35%;
+}
+
+.btnAccion {
+    width: 80px;
+    height: 30px;
+}
+
+form {
+    background-color: #35155D;
+    height: 94vh;
+}
+
+.btnsForm > button {
+    height: 60px;
+}
+
+td > input {
+    color: black;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4477CE;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #4477CE;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
