@@ -36,7 +36,6 @@ function procesarForm(data,cliente) {
     //agrega el nuevo cliente y lo guarda en localStorage
     data.push(cliente);
     guardarStorage('clientes',data);
-    console.log(data)
 
     const template = addFilaTablaCliente(cliente);
     

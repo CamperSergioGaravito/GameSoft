@@ -4,16 +4,16 @@ export function addFilaTablaCliente(data) {
                     <tr>
                         <td scope="row">${data.dni}</td>
                         <td>
-                            <input class="bg-transparent border-0 text-black text-center " type="text" value="${data.nombres}" disabled>
+                            <input class="bg-transparent border-0 text-black text-center w-100" type="text" value="${data.nombres}" disabled>
                         </td>
                         <td>
-                            <input class="bg-transparent border-0 text-black text-center " type="text" value="${data.apellidos}" disabled>
+                            <input class="bg-transparent border-0 text-black text-center w-100" type="text" value="${data.apellidos}" disabled>
                         </td>
                         <td>
-                            <input class="bg-transparent border-0 text-black text-center " type="number"  value="${data.telefono}" disabled>
+                            <input class="bg-transparent border-0 text-black text-center w-100" type="number"  value="${data.telefono}" disabled>
                         </td>
                         <td>
-                            <input class="bg-transparent border-0 text-black text-center " type="email"  value="${data.email}" disabled>
+                            <input class="bg-transparent border-0 text-black text-center w-100" type="email"  value="${data.email}" disabled>
                         </td>
                         <td>${data.f_nacimiento}</td>
                         <td>${data.nacionalidad}</td>
