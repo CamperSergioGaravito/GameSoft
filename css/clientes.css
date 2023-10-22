@@ -21,7 +21,7 @@
     background-color: rgb(13,110,253);
 }
 
-input[type="checkbox"] {
+td > input[type="checkbox"] {
     transform: scale(2);
     top: 35%;
 }
@@ -43,6 +43,19 @@ form {
 td > input {
     color: black;
     font-weight: bold;
+}
+
+.modalBusqueda {
+    height: 10vh;
+    bottom: 1%;
+}
+
+.contBuscar {
+    height: 50%;
+}
+
+.contBuscar > input {
+    height: 100%;
 }
 
 ::-webkit-scrollbar {

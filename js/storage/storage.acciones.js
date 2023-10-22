@@ -21,42 +21,50 @@ export function obtenerItem(clave) {
     }
 }
 
-export function buscarItemStorage(clave,buscado_por,valor_buscado) {
+export function buscarItemStorage(clave,buscado_por,valor_buscado,accion=false) {
     const data = obtenerItem(clave);
     let dataF = {
         estado: false,
-        data: false,
+        data: accion ? [] : false,
         dataStorage: data
     };
 
     if(data) {
         data.forEach(item => {
             const d_busqueda = {
-                apellidos: item.apellidos,
+                apellidos: item.apellidos.toLowerCase(),
                 dni: item.dni,
                 email: item.email,
                 f_nacimiento: item.f_nacimiento,
-                nacionalidad: item.nacionalidad,
-                nombres: item.nombres,
+                nacionalidad: item.nacionalidad.toLowerCase(),
+                nombres: item.nombres.toLowerCase(),
                 telefono: item.telefono
             }
+            if(!accion) {
+                if(d_busqueda[buscado_por] === valor_buscado) {
+                    console.log('aqui');
+                    dataF.data = item;
+                    dataF.estado = true;
+                    return;
+                }
+                else {
+                    dataF.estado = false;
+                    dataF.data = false;
+                }
+            }
+            else {                
+                if(d_busqueda[buscado_por].search(valor_buscado) !== -1) {
+                    dataF.data.push(item);
+                }
+                else {
+                    
+                }
+            }
             
-            if(d_busqueda[buscado_por] === valor_buscado) {
-                console.log('aqui');
-                dataF.data = item;
-                dataF.estado = true;
-                return;
-            }
-            else {
-                dataF.estado = false;
-                dataF.data = false;
-            }
         })
-        console.log('1 ',dataF)
         return dataF;
     }
     else {
-        console.log('2 ',dataF)
         return dataF;
     }
 }

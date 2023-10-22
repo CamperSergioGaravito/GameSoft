@@ -1,4 +1,5 @@
 export function addFilaTablaCliente(data) {
+
     const template = //html
                     `
                     <tr>

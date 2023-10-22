@@ -1,12 +1,11 @@
 import { Cliente } from "../clases/Clase.cliente.js";
-import { guardarStorage, obtenerItem } from "../storage/storage.acciones.js";
+import { buscarItemStorage, guardarStorage, obtenerItem } from "../storage/storage.acciones.js";
 import { addFilaTablaCliente } from "./template.filaTabla.js";
 
 export function capturarDataForm(e) {
     e.preventDefault();
-    console.log('o-O ',e.target)
     const formNC = document.getElementById('formNewcliewnt');
-    console.log(formNC.nombres.value)
+    
     const cliente = new Cliente(
                                 formNC.dni.value,
                                 formNC.nombres.value,
@@ -15,15 +14,18 @@ export function capturarDataForm(e) {
                                 formNC.email.value,    
                                 formNC.nacimiento.value,
                                 formNC.nacionalidad.value
-                            )
-
-    
-    console.log(`capturar.data.form.js :: capturarDataForm :: cliente ->`, cliente)
+                            );
 
     const clientesLocalSt = obtenerItem('clientes');
 
     if(clientesLocalSt) {
-        procesarForm(clientesLocalSt,cliente);
+        const resBusq = buscarItemStorage('clientes','dni',cliente.dni);
+        if(!resBusq.estado) {
+            procesarForm(clientesLocalSt,cliente);
+        }
+        else {
+            alert(`Cliente registrado`)
+        }
     }
     else {
         guardarStorage('clientes',[]);
