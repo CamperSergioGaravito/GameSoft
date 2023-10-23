@@ -58,7 +58,7 @@ td > input {
     height: 100%;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     background-color: transparent;
 }
 
@@ -68,7 +68,7 @@ td > input {
 
 ::-webkit-scrollbar-corner {
     background-color: #4477CE;
-}
+} */
 
 
 input[type=number]::-webkit-inner-spin-button,

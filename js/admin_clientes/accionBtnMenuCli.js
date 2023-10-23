@@ -6,7 +6,6 @@ import { capturarDataForm } from "./capturar.data.form.js";
 import { eliminarCliente } from "./validar.eliminar.js";
 
 export function accionBtnMenuCli(e) {
-    console.log(e.target.id);
     const idBtn = e.target.id;
 
     if(idBtn === 'agregar') {
@@ -38,6 +37,8 @@ export function accionBtnMenuCli(e) {
         }
         else {
             document.getElementById('modalBusqueda').remove();
+            const resultado = obtenerItem('clientes');
+            mostrarResBusqueda(resultado);
         }        
     }
 

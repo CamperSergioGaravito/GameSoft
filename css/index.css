@@ -10,6 +10,18 @@
     --fondo-HoverBtnsMenu: #9056d7;
 }
 
+::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--fondo-btnsMenu);
+}
+
+::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+
 body {
     width: 100%;
     background-color: var(--fondo);

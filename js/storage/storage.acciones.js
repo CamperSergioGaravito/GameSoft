@@ -30,22 +30,23 @@ export function buscarItemStorage(clave,buscado_por,valor_buscado,accion=false) 
     };
 
     if(data) {
-        data.forEach(item => {
+
+        for(let x=0;x<data.length;x++) {
             const d_busqueda = {
-                apellidos: item.apellidos.toLowerCase(),
-                dni: item.dni,
-                email: item.email,
-                f_nacimiento: item.f_nacimiento,
-                nacionalidad: item.nacionalidad.toLowerCase(),
-                nombres: item.nombres.toLowerCase(),
-                telefono: item.telefono
+                apellidos: data[x].apellidos.toLowerCase(),
+                dni: data[x].dni,
+                email: data[x].email,
+                f_nacimiento: data[x].f_nacimiento,
+                nacionalidad: data[x].nacionalidad.toLowerCase(),
+                nombres: data[x].nombres.toLowerCase(),
+                telefono: data[x].telefono
             }
-            if(!accion) {
+
+            if(accion === false) {
                 if(d_busqueda[buscado_por] === valor_buscado) {
-                    console.log('aqui');
-                    dataF.data = item;
+                    dataF.data = data[x];
                     dataF.estado = true;
-                    return;
+                    return dataF
                 }
                 else {
                     dataF.estado = false;
@@ -54,14 +55,14 @@ export function buscarItemStorage(clave,buscado_por,valor_buscado,accion=false) 
             }
             else {                
                 if(d_busqueda[buscado_por].search(valor_buscado) !== -1) {
-                    dataF.data.push(item);
+                    dataF.data.push(data[x]);
                 }
                 else {
                     
                 }
             }
             
-        })
+        }
         return dataF;
     }
     else {

@@ -1,6 +1,6 @@
 export const templateHeader = //html
                             `
-                            <a href="../../index.html" class="container-fluid text-decoration-none  col-11 d-flex align-items-center justify-content-start ">
+                            <a href="../../index.html" class="row text-decoration-none  col-4 d-flex align-items-center justify-content-start ">
                                 <img src="../../assets/logo.png" alt="logo" class="header__img">
                                 <h1 class="fs-1 col-4 m-0 fw-bold text-white">GameSoft</h1>
                             </a>

@@ -1,0 +1,67 @@
+:root {
+    --fondo: #35155D;
+    --font-family-Arima: 'Arima',serif;
+    --fondo-btnsMenu: #5d14b6;
+    --fondo-HoverBtnsMenu: #9056d7;
+    --fondo-hover: #450a8c;
+}
+
+.contBtns {
+    height: 10vh;
+    bottom: 1%;
+    left: 2%;
+}
+
+.contBtns > button {
+    height: 80%;
+    background-color: var(--fondo-btnsMenu);
+}
+
+.contBtns > button:hover, .controlPag > button:hover {
+    background-color: var(--fondo-hover);
+}
+
+.tarjeta {
+    width: 390px;
+    height: 65vh;
+    background-color: var(--fondo-hover);
+    box-shadow: 4px 15px 10px 8px #f806cc5a;
+}
+
+.controlPag {
+    height: 10vh;
+    bottom: 1%;
+    right: 2%;
+}
+
+.controlPag > button {
+    background-color: var(--fondo-btnsMenu);
+    height: 50%;
+}
+
+.contImg {
+    width: 100%;
+    height: 25vh;
+}
+
+.infoCard {
+    height: 53%;
+}
+
+.tituloCard {
+    width: 365px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.textFloat {
+    overflow: hidden;
+    height: 7vh;    
+}
+
+#generosJuego, #plataformasJuego  {
+    width: 50px;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}

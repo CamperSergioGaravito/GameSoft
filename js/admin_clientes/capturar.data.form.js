@@ -20,11 +20,13 @@ export function capturarDataForm(e) {
 
     if(clientesLocalSt) {
         const resBusq = buscarItemStorage('clientes','dni',cliente.dni);
+        console.log(resBusq,'resBusq',cliente.dni)
         if(!resBusq.estado) {
             procesarForm(clientesLocalSt,cliente);
         }
         else {
-            alert(`Cliente registrado`)
+            alert(`Cliente registrado`);
+            document.getElementById('modalAggCliente').remove();
         }
     }
     else {
@@ -42,5 +44,5 @@ function procesarForm(data,cliente) {
     const template = addFilaTablaCliente(cliente);
     
     document.getElementById('clienteTbody').insertAdjacentHTML('beforeend',template);
-    document.getElementById('modalAggCliente').remove()
+    document.getElementById('modalAggCliente').remove();
 }
