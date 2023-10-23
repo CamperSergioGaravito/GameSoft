@@ -15,8 +15,10 @@ export function aggAinventario() {
 
     cards.addEventListener('click', (e) => {
         console.log(e.target.offsetParent.querySelector('#idJuego'));
-        /* const inventario = obtenerItem('inventario') === false ?  */
+        const inventario = obtenerItem('inventario');
         console.log(`agregarA.inventario.js :: cards.addEventListener :: inventario -> ${inventario} `,inventario)
+
+        /* if(inventario) */
 
         if(e.target.offsetParent.querySelector('#idJuego').textContent) {
             if(e.target.localName === 'button') {
