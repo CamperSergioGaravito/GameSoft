@@ -3,10 +3,9 @@ import { proceso_inicial } from "./proceso.inicial.js";
 import { verInventario } from "./verInventario.js";
 
 /* Proceso inicial de carga */
-/* proceso_inicial();
-aggAinventario(); */
+proceso_inicial();
+aggAinventario();
 
-verInventario()
 
 const btnAggInventario = document.getElementById('btnAggInventario');
 const btnVerInventario = document.getElementById('btnVerInventario');
