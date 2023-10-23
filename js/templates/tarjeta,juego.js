@@ -23,7 +23,7 @@ export function tarjetaJuego(data) {
                             <h3 class="col-6 m-0 fw-bold fs-4 bg-warning h-100 rounded-3 d-flex align-items-center justify-content-center ">
                                 $<span id="precioJuego">${data.valor_licencia}</span>
                             </h3>
-                            <button type="button" class="col-6 fs-4 btn btn-success fw-bold" data-item="${data}" id="agregarJuego">
+                            <button type="button" class="col-6 fs-4 btn btn-success fw-bold" id="agregarJuego">
                                 Agregar
                             </button>
                         </div>

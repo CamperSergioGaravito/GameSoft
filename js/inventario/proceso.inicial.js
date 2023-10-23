@@ -71,7 +71,7 @@ export function proceso_inicial() {
         }
     }
 
-    peticion('../../db/prueba.json');
+    peticion("https://api.rawg.io/api/games?dates=2019-09-01%2C2019-09-30&key=2884402bc21d482e912a04f52e13b648&page=2&platforms=18%2C1%2C7");
 
 
     document.getElementById('contPanelContr').addEventListener('click', (e) => {

@@ -14,13 +14,19 @@ export function aggAinventario() {
     const cards = document.getElementById('board');
 
     cards.addEventListener('click', (e) => {
-        console.log(e.target.offsetParent.querySelector('#idJuego'));
-        const inventario = obtenerItem('inventario');
-        console.log(`agregarA.inventario.js :: cards.addEventListener :: inventario -> ${inventario} `,inventario)
 
-        /* if(inventario) */
+        let validador = undefined;
+        for(let x=0; x<inventarioStorage.length; x++) {
+            if(inventarioStorage[x].id === e.target.offsetParent.querySelector('#idJuego').textContent) {
+                validador = false;
+                return;
+            }
+            else {
+                validador = true;
+            }
+        }
 
-        if(e.target.offsetParent.querySelector('#idJuego').textContent) {
+        if(validador && e.target.offsetParent.querySelector('#idJuego').textContent) {
             if(e.target.localName === 'button') {
                 console.log((e.target.offsetParent.querySelector('#nombreJuego')));
                 const juego = new Juego(
